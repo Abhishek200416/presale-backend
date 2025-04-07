@@ -1,5 +1,3 @@
-// backend/routes/api.js
-
 const express = require('express');
 const router = express.Router();
 const connectionController = require('../controllers/connectionController');
@@ -11,10 +9,10 @@ router.get('/', (req, res) => {
 });
 
 // Create a new connection
-router.post('/connection', connectionController.createConnection);
+router.post('/', connectionController.createConnection);
 
 // Update a connection by ID
-router.put('/connection/:id', connectionController.updateConnection);
+router.put('/:id', connectionController.updateConnection);
 
 // Get all connections sorted by createdAt DESC
 router.get('/connections', async(req, res) => {
