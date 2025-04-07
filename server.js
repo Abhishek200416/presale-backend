@@ -11,7 +11,7 @@ app.use(cors());
 app.use(express.json());
 
 // Routes
-const connectionRoutes = require('./routes/connection');
+const connectionRoutes = require('./routes/api');
 app.use('/api/connection', connectionRoutes);
 
 // Test DB connection
